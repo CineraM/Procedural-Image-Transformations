@@ -1,0 +1,27 @@
+Let the input image be W x H sized.
+
+As studied in class, there are two ways to output the transformed image:
+
+(A) choose the portion of the output plane where the output image is mapped. This is done by the inverse_warp function studied in class. Note the output image could be different from W x H in this case.
+
+(B) choose W x H portion of the output plane with the top-left corner remaining at (0, 0), i.e. we choose the portion of the output plane that coincides with the input image (the inverse_warp2 function).
+
+01. Translation X % shift, Y % shift, rest will be black. X and Y shifts are user specified, % is based on the total number of rows and cols in the image. Positive percentages are shifts to the right (or down), and negative ones are to the left (or up). Use method (A) to specify the output image.
+
+02. Rotate theta degrees. Theta is the angle of 2D rotation specified in degrees. Positive values denote counterclockwise rotation and negative values denote clockwise rotation. Use method (B) to specify the output image.
+
+03. Scale % the image. Greater than 100% denotes expansion, and less than 100% is contraction. Use method (B) to specify the output image.
+
+04. Affine, A, is a user specified vector of 6 parameters a_00, a_11, a_01, a_10, t_x, t_y. Use method (B) to specify the output image.
+
+05. Projective, H, is a user specified vector of 8 parameters h_00, h_11, h_12, h_10, h_11, h_12, h_21, h_22, (h_23=1) . Use method (B) to specify the output image.
+
+06. Contrast and brightness modulation of the L-channel of the input image input using "a" and "b". The output image will be the same size as the input and in RGB format.
+
+07. Gamma correction of the L-channel of the input image input using "a" and "b". The output image will be the same size as the input and in RGB format.
+
+08. Histogram equalization of the L-channel of the input image input using "a" and "b". The output image will be the same size as the input and in RGB format.
+
+09. Compute the mean image and the standard deviation image of a collection of images.
+
+10. Batch normalize an image given a collection of images.
