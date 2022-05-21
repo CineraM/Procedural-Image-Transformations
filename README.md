@@ -6,7 +6,6 @@ Usf class Project, Basic Helper functinos were provided by Daniel Sawyer (TA)
 ### Application Dependencies
      pip install -U scikit-image
      pip install numpy
-     pip install opencv-python
      pip install imageio
 
 
